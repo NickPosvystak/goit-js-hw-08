@@ -11,6 +11,11 @@ const data = {
     message: messageValue,
 }
 const savedData = JSON.parse(localStorage.getItem("feedback-form-state"));
+// if (savedData) {
+//     data.email = savedData.email;
+//     data.message = savedData.message;
+//   }
+// console.log(localStorage)
 
 form.addEventListener('input', throttle(onInput, 500));
 
