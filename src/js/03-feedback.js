@@ -11,12 +11,7 @@ const data = {
     message: messageValue,
 }
 const savedData = JSON.parse(localStorage.getItem("feedback-form-state"));
-if(savedData){
-    form.elements.email.value = savedData.email;
-    data.elements.message.value = savedData.message;
 
-
-}
 form.addEventListener('input', throttle(onInput, 500));
 
 function onInput(event){
@@ -25,7 +20,7 @@ data[event.target.name] = event.target.value;
 
 
     localStorage.setItem("feedback-form-state", JSON.stringify(data));
-    // console.log(localStorage)
+    console.log(localStorage)
 }
 form.addEventListener('submit', onSubmit)
 

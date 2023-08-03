@@ -9,7 +9,6 @@ player.on(
 
   function onPlay(data) {
     localStorage.setItem('videoplayer-current-time', data.seconds);
-    // console.log(localStorage)
   };
 
 const currentTime = localStorage.getItem('videoplayer-current-time') || 0;
