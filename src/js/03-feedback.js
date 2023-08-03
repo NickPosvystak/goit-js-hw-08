@@ -20,7 +20,7 @@ data[event.target.name] = event.target.value;
 
 
     localStorage.setItem("feedback-form-state", JSON.stringify(data));
-    console.log(localStorage)
+    // console.log(localStorage)
 }
 form.addEventListener('submit', onSubmit)
 
