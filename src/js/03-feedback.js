@@ -19,11 +19,13 @@ if(savedData){
 }
 form.addEventListener('input', throttle(onInput, 500));
 
-function onInput(){
-    data.email = form.elements.email.value;
-    data.message = form.elements.message.value;
+function onInput(event){
+    
+data[event.target.name] = event.target.value;
+
 
     localStorage.setItem("feedback-form-state", JSON.stringify(data));
+    // console.log(localStorage)
 }
 form.addEventListener('submit', onSubmit)
 
